@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  FabricDecoder
 //
-//  Created by Amit Gupta on 2/11/24.
+//  Created by Danika Gupta on 2/11/24.
 //
 
 import SwiftUI

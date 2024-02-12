@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA7530D02B79F2E500EC79C9 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7530CF2B79F2E500EC79C9 /* ConfigurationView.swift */; };
 		AA88B32D2B79AE78000EED4D /* FabricDecoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */; };
 		AA88B32F2B79AE78000EED4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B32E2B79AE78000EED4D /* ContentView.swift */; };
 		AA88B3312B79AE79000EED4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA88B3302B79AE79000EED4D /* Assets.xcassets */; };
 		AA88B3342B79AE79000EED4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA88B3332B79AE79000EED4D /* Preview Assets.xcassets */; };
+		AA88B33B2B79AE99000EED4D /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B33A2B79AE99000EED4D /* ObjectDetectionView.swift */; };
+		AA88B33D2B79AF7E000EED4D /* MultiTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B33C2B79AF7E000EED4D /* MultiTabView.swift */; };
+		AA88B3402B79AFB3000EED4D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AA88B33F2B79AFB3000EED4D /* SwiftyJSON */; };
+		AA88B3422B79B043000EED4D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B3412B79B043000EED4D /* ImagePicker.swift */; };
+		AA88B3442B79B071000EED4D /* WebViewCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B3432B79B071000EED4D /* WebViewCore.swift */; };
+		AA88B3462B79B117000EED4D /* FabricObjectDetector 1 Iteration 150.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA88B3452B79B117000EED4D /* FabricObjectDetector 1 Iteration 150.mlmodel */; };
+		AA88B3482B79C3B1000EED4D /* FabricObjectDetector 1 Iteration 3770.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA88B3472B79C3B1000EED4D /* FabricObjectDetector 1 Iteration 3770.mlmodel */; };
+		AA88B34A2B79C9F8000EED4D /* LabelCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B3492B79C9F8000EED4D /* LabelCoordinates.swift */; };
+		AA88B34C2B79E21C000EED4D /* FabricInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B34B2B79E21C000EED4D /* FabricInfo.swift */; };
+		AA88B34E2B79E62E000EED4D /* FabricObjectDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA88B34D2B79E62E000EED4D /* FabricObjectDetector 1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA7530CF2B79F2E500EC79C9 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
 		AA88B3292B79AE78000EED4D /* FabricDecoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FabricDecoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricDecoderApp.swift; sourceTree = "<group>"; };
 		AA88B32E2B79AE78000EED4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA88B3302B79AE79000EED4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA88B3332B79AE79000EED4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA88B33A2B79AE99000EED4D /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
+		AA88B33C2B79AF7E000EED4D /* MultiTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTabView.swift; sourceTree = "<group>"; };
+		AA88B3412B79B043000EED4D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AA88B3432B79B071000EED4D /* WebViewCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCore.swift; sourceTree = "<group>"; };
+		AA88B3452B79B117000EED4D /* FabricObjectDetector 1 Iteration 150.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FabricObjectDetector 1 Iteration 150.mlmodel"; sourceTree = "<group>"; };
+		AA88B3472B79C3B1000EED4D /* FabricObjectDetector 1 Iteration 3770.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FabricObjectDetector 1 Iteration 3770.mlmodel"; sourceTree = "<group>"; };
+		AA88B3492B79C9F8000EED4D /* LabelCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCoordinates.swift; sourceTree = "<group>"; };
+		AA88B34B2B79E21C000EED4D /* FabricInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricInfo.swift; sourceTree = "<group>"; };
+		AA88B34D2B79E62E000EED4D /* FabricObjectDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FabricObjectDetector 1.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA88B3402B79AFB3000EED4D /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +75,16 @@
 			children = (
 				AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */,
 				AA88B32E2B79AE78000EED4D /* ContentView.swift */,
+				AA88B3412B79B043000EED4D /* ImagePicker.swift */,
+				AA88B33A2B79AE99000EED4D /* ObjectDetectionView.swift */,
+				AA88B34B2B79E21C000EED4D /* FabricInfo.swift */,
+				AA88B3492B79C9F8000EED4D /* LabelCoordinates.swift */,
+				AA7530CF2B79F2E500EC79C9 /* ConfigurationView.swift */,
+				AA88B33C2B79AF7E000EED4D /* MultiTabView.swift */,
+				AA88B3432B79B071000EED4D /* WebViewCore.swift */,
+				AA88B34D2B79E62E000EED4D /* FabricObjectDetector 1.mlmodel */,
+				AA88B3452B79B117000EED4D /* FabricObjectDetector 1 Iteration 150.mlmodel */,
+				AA88B3472B79C3B1000EED4D /* FabricObjectDetector 1 Iteration 3770.mlmodel */,
 				AA88B3302B79AE79000EED4D /* Assets.xcassets */,
 				AA88B3322B79AE79000EED4D /* Preview Content */,
 			);
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = FabricDecoder;
+			packageProductDependencies = (
+				AA88B33F2B79AFB3000EED4D /* SwiftyJSON */,
+			);
 			productName = FabricDecoder;
 			productReference = AA88B3292B79AE78000EED4D /* FabricDecoder.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = AA88B3202B79AE78000EED4D;
+			packageReferences = (
+				AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = AA88B32A2B79AE78000EED4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +176,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA88B32F2B79AE78000EED4D /* ContentView.swift in Sources */,
+				AA7530D02B79F2E500EC79C9 /* ConfigurationView.swift in Sources */,
+				AA88B33B2B79AE99000EED4D /* ObjectDetectionView.swift in Sources */,
+				AA88B3422B79B043000EED4D /* ImagePicker.swift in Sources */,
+				AA88B34E2B79E62E000EED4D /* FabricObjectDetector 1.mlmodel in Sources */,
+				AA88B34A2B79C9F8000EED4D /* LabelCoordinates.swift in Sources */,
+				AA88B33D2B79AF7E000EED4D /* MultiTabView.swift in Sources */,
+				AA88B3442B79B071000EED4D /* WebViewCore.swift in Sources */,
+				AA88B3462B79B117000EED4D /* FabricObjectDetector 1 Iteration 150.mlmodel in Sources */,
+				AA88B3482B79C3B1000EED4D /* FabricObjectDetector 1 Iteration 3770.mlmodel in Sources */,
+				AA88B34C2B79E21C000EED4D /* FabricInfo.swift in Sources */,
 				AA88B32D2B79AE78000EED4D /* FabricDecoderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +320,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FabricDecoder/Preview Content\"";
-				DEVELOPMENT_TEAM = U4WHYADYH2;
+				DEVELOPMENT_TEAM = T4JB96P77H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take picture of the fabric for analysis.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecoder;
+				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,9 +350,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FabricDecoder/Preview Content\"";
-				DEVELOPMENT_TEAM = U4WHYADYH2;
+				DEVELOPMENT_TEAM = T4JB96P77H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take picture of the fabric for analysis.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecoder;
+				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA88B33F2B79AFB3000EED4D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA88B3212B79AE78000EED4D /* Project object */;
 }
