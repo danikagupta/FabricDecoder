@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA7530D02B79F2E500EC79C9 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7530CF2B79F2E500EC79C9 /* ConfigurationView.swift */; };
+		AA7530D32B7AE51700EC79C9 /* Roboflow in Frameworks */ = {isa = PBXBuildFile; productRef = AA7530D22B7AE51700EC79C9 /* Roboflow */; };
 		AA88B32D2B79AE78000EED4D /* FabricDecoderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */; };
 		AA88B32F2B79AE78000EED4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA88B32E2B79AE78000EED4D /* ContentView.swift */; };
 		AA88B3312B79AE79000EED4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA88B3302B79AE79000EED4D /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA3695D42B7D30EE00B0C307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AA7530CF2B79F2E500EC79C9 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
 		AA88B3292B79AE78000EED4D /* FabricDecoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FabricDecoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabricDecoderApp.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7530D32B7AE51700EC79C9 /* Roboflow in Frameworks */,
 				AA88B3402B79AFB3000EED4D /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +76,7 @@
 		AA88B32B2B79AE78000EED4D /* FabricDecoder */ = {
 			isa = PBXGroup;
 			children = (
+				AA3695D42B7D30EE00B0C307 /* Info.plist */,
 				AA88B32C2B79AE78000EED4D /* FabricDecoderApp.swift */,
 				AA88B32E2B79AE78000EED4D /* ContentView.swift */,
 				AA88B3412B79B043000EED4D /* ImagePicker.swift */,
@@ -117,6 +121,7 @@
 			name = FabricDecoder;
 			packageProductDependencies = (
 				AA88B33F2B79AFB3000EED4D /* SwiftyJSON */,
+				AA7530D22B7AE51700EC79C9 /* Roboflow */,
 			);
 			productName = FabricDecoder;
 			productReference = AA88B3292B79AE78000EED4D /* FabricDecoder.app */;
@@ -148,6 +153,7 @@
 			mainGroup = AA88B3202B79AE78000EED4D;
 			packageReferences = (
 				AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				AA7530D12B7AE51700EC79C9 /* XCRemoteSwiftPackageReference "roboflow-swift" */,
 			);
 			productRefGroup = AA88B32A2B79AE78000EED4D /* Products */;
 			projectDirPath = "";
@@ -323,12 +329,14 @@
 				DEVELOPMENT_TEAM = T4JB96P77H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FabricDecoder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take picture of the fabric for analysis.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +344,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,12 +365,14 @@
 				DEVELOPMENT_TEAM = T4JB96P77H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FabricDecoder/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to take picture of the fabric for analysis.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +380,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.FabricDecode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,6 +414,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA7530D12B7AE51700EC79C9 /* XCRemoteSwiftPackageReference "roboflow-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roboflow/roboflow-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 		AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -407,6 +433,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA7530D22B7AE51700EC79C9 /* Roboflow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA7530D12B7AE51700EC79C9 /* XCRemoteSwiftPackageReference "roboflow-swift" */;
+			productName = Roboflow;
+		};
 		AA88B33F2B79AFB3000EED4D /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA88B33E2B79AFB3000EED4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

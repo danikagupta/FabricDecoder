@@ -16,12 +16,14 @@ struct MultiTabView: View {
             TabView{
                 ObjectDetectionView()
                     .tabItem{
-                        Label("Detect trash",systemImage: "eye.circle.fill")
+                        Label("ID Fabric",systemImage: "eye.circle.fill")
                     }
+                /*
                 WebView(url:URL(string:"https://sites.google.com/view/myfirstaiontheweb/home")!)
                     .tabItem{
-                        Label("Recycle",systemImage: "arrow.3.trianglepath")
+                        Label("Information",systemImage: "info")
                     }
+                 */
                 ConfigurationView()
                     .tabItem {
                         Label("Settings", systemImage: "gear")

@@ -9,32 +9,23 @@ import SwiftUI
 
 struct ConfigurationView: View {
     @State private var isCameraEnabled = false
+    @State private var useLocalModel = false
     @State private var currentStatus = "Inactive"
+    @State private var currentModel  = "YOLOv8"
     @State private var counter = 0
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Settings")) {
-                    /*
-                    HStack {
-                        Text("Option A")
-                            .foregroundColor(isOptionASelected ? .blue : .secondary)
-                        Spacer()
-                        Toggle("", isOn: $isOptionASelected)
-                            .labelsHidden() // Hide default labels
-                            .onChange(of: isOptionASelected) { newValue in
-                                // Handle the change if needed
-                            }
-                        Spacer()
-                        Text("Option B")
-                            .foregroundColor(isOptionASelected ? .secondary : .blue)
-                    }
-                    .padding()
                     
-                    // Use the toggle state to modify other views or display additional information
-                    Text("Selected: \(isOptionASelected ? "Option A" : "Option B")")
-                    */
+                    Toggle(isOn: $useLocalModel) {
+                        Text("Use Local Model")
+                    }
+                    .onChange(of: useLocalModel) { newValue in
+                        currentModel = newValue ? "CreateML" : "YoloV8"
+                        FabricInfo.useLocalModel = newValue
+                    }
                     
                     Toggle(isOn: $isCameraEnabled) {
                         Text("Use Camera")
@@ -47,7 +38,25 @@ struct ConfigurationView: View {
                 
                 Section(header: Text("Status")) {
                     Text("Feature is \(currentStatus)")
-                    Text("Counter: \(counter)")
+                    Text("Model is : \(currentModel)")
+                    if FabricInfo.cameraSource {
+                        Text("FI camera source is true")
+                    } else {
+                        Text("FI camera source is false")
+                    }
+                    if FabricInfo.useLocalModel {
+                        Text("FI use local is true")
+                    } else {
+                        Text("FI use local is false")
+                    }
+
+                }
+                
+                Section(header: Text("Logs")) {
+                    Button("Refresh \(counter)") {
+                        counter+=1;
+                    }
+                    Text(FabricInfo.LOGS)
                 }
             }
             .navigationTitle("Configuration")

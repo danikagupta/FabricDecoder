@@ -10,6 +10,7 @@ import SwiftUI
 import CoreML
 import Vision
 import UIKit
+import Roboflow
 
 struct ObjectDetectionView: View {
     @State private var resultText=""
@@ -53,8 +54,121 @@ struct ObjectDetectionView: View {
         self.showingImagePicker = true
     }
     
-    
     func detectObjects() {
+        resultText=""
+        resultDesc=""
+        if FabricInfo.useLocalModel {
+            detectObjectsLocal()
+        } else {
+            detectObjectsRemote()
+        }
+    }
+    
+    func parseAndTransform(jsonString: String) {
+        guard let jsonData = jsonString.data(using: .utf8) else { return }
+        
+        let decoder = JSONDecoder()
+        do {
+            let detectionData = try decoder.decode(DetectionData.self, from: jsonData)
+            print("\n\n Detection data is \(detectionData)\n\n")
+            
+            // Extracting class names
+            let classNames = Set(detectionData.predictions.map { $0.class }).sorted()
+            print("Class names is is \(classNames)")
+            
+            let observations = detectionData.getList()
+            print("PauseAndTransform: Seeing list \(observations)")
+            self.drawBoundingBoxes(on: &self.inputImage, with: observations)
+            print("PauseAndTransform: Complete")
+        } catch {
+            print("Error parsing JSON: \(error)")
+        }
+    }
+    
+    
+    func detectObjectsRemote() {
+        print("Calling detectObjectsRemote\n")
+        
+        guard let inputImage=inputImage else {
+            print("No image selected : detectObjectsRemote")
+            return
+        }
+
+        let imageData = inputImage.jpegData(compressionQuality: 0.5)
+        let fileContent = imageData?.base64EncodedString()
+        let postData = fileContent!.data(using: .utf8)
+
+        // Initialize Inference Server Request with API_KEY, Model, and Model Version
+        let url = "https://detect.roboflow.com/"+FabricInfo.RF_MODEL_ID+"/1?api_key="+FabricInfo.RF_API_KEY+"&name=YOUR_IMAGE.jpg"
+        var request = URLRequest(url: URL(string: url)!,timeoutInterval: Double.infinity)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        request.httpBody = postData
+
+        // Execute Post Request
+        URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+            
+            // Parse Response to String
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            
+            // Convert Response String to Dictionary
+            do {
+                let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            // Print String Response
+            let str=String(data: data, encoding: .utf8)!
+            print("Showing data in detectObjectsRemote")
+            print(str)
+            parseAndTransform(jsonString: str)
+        }).resume()
+
+    }
+    
+    func detectObjectsRemoteApi() {
+        guard let inputImage=inputImage else {
+            print("No image selected : detectObjectsRemote")
+            return
+        }
+        
+        let rf = RoboflowMobile(apiKey: FabricInfo.RF_API_KEY)
+        var mlModel: RFObjectDetectionModel!
+        rf.load(model: FabricInfo.RF_MODEL_ID, modelVersion: 1) { [self] model, error, modelName, modelType in
+            mlModel = model
+            if error != nil {
+                print(error?.localizedDescription as Any)
+            } else {
+                model?.configure(threshold: 0.1, overlap: 0.4, maxObjects: 10.0)
+            }
+        }
+        mlModel.detect(image: inputImage) { detections, errorr in
+            let detectionResults: [RFObjectDetectionPrediction] = detections!
+            print("Detection results remote \(detectionResults)")
+            /*
+            let objectBoundsAndLabels = detectionResults.map { dr -> (CGRect, String) in
+                let drv=dr.getValues()
+                let label = drv["classname"]
+                let x: CGFloat = drv["x"]
+                let y: CGFloat = drv["y"]
+                let w: CGFloat = drv["width"]
+                let h: CGFloat = drv["height"]
+                let objectBounds=CGRect(x: x, y: y, width: drv["width"], height: drv["height"])
+                     return (objectBounds, label)
+                 }
+            self.drawBoundingBoxes(on: &self.inputImage, with: objectBoundsAndLabels)
+            */
+             print("NOT IN USE Breakpoint")
+        }
+        
+        print("dOR API: TO-DO TO-DO TO-DO")
+    }
+    
+    func detectObjectsLocal() {
         guard let inputImage=inputImage else {
             print("No image selected")
             return
@@ -151,7 +265,6 @@ struct ObjectDetectionView: View {
         } else {
             resultText = "Sorry. Fabric not found."
         }
-        print("TO-DO TO-DO TO-DO")
     }
     
     

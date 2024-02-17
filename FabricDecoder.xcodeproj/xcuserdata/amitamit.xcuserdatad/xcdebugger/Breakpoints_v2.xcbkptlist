@@ -3,4 +3,54 @@
    uuid = "45DFFE0A-395B-4F50-8C5A-7690EC155CD8"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F20D982-1434-484A-B2EB-25B8539FB849"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FabricDecoder/ObjectDetectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "detectObjectsRemoteApi()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F20D982-1434-484A-B2EB-25B8539FB849 - e86a0472f44dc92c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;Roboflow.RFObjectDetectionPrediction&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FabricDecoder.ObjectDetectionView.detectObjectsRemoteApi() -&gt; ()"
+                  moduleName = "FabricDecoder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amitamit/Documents/AIClub/IOS/Learning/FabricDecoder/FabricDecoder/ObjectDetectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "732">
+               </Location>
+               <Location
+                  uuid = "8F20D982-1434-484A-B2EB-25B8539FB849 - e86a0472f44dc90d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;Roboflow.RFObjectDetectionPrediction&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FabricDecoder.ObjectDetectionView.detectObjectsRemoteApi() -&gt; ()"
+                  moduleName = "FabricDecoder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amitamit/Documents/AIClub/IOS/Learning/FabricDecoder/FabricDecoder/ObjectDetectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "632">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
